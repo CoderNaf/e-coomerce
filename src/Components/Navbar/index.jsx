@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useContext } from "react";
 import { ShoppingCartContext } from "../../Context";
-
+import { FaCartShopping } from "react-icons/fa6";
 
 function Navbar (){
     const context = useContext(ShoppingCartContext)
@@ -58,7 +58,12 @@ function Navbar (){
                         Sing In
                     </NavLink>
                 </li>
-                🛒 {context.count}
+                <div className="flex relative items-center cursor-pointer">
+                <FaCartShopping className="text-[1.3rem]"/> 
+                    <span className=" bg-slate-300 rounded-full px-1 absolute right-[-5px] top-[-12px] text-[11px] text-black font-semibold">
+                        {context.count}
+                    </span>
+                </div>
             </ul>
         </nav>      
     )

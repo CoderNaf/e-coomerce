@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { ShoppingCartContext } from "../../Context"
 
 
+
 function Card(data){
     const context = useContext(ShoppingCartContext)
     return(
@@ -18,7 +19,6 @@ function Card(data){
             <p className="flex justify-between">
                 <span className="text-sm font-light">{data.data.title}</span>
                 <span className="text-lg font-medium ">${data.data.price}</span>
-
             </p>
         </div>
     )
